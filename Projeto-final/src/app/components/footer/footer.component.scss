@@ -1,0 +1,53 @@
+footer {
+    background-color: #232323;
+    height: 250px;
+}
+
+.logo_instagram img,
+.logo_twitter img{
+    width: 50px;
+    height: 50px;
+}
+
+.logo_face{
+    width: 25.96px;
+    height: 50px;
+}
+
+.tamanho, .procon, .trabalhe_conosco{
+    width: 250px;
+}
+
+.tamanho a, .procon a, .trabalhe_conosco a{
+    text-decoration: none;
+}
+
+.cor_texto {
+    color: #CBDBE8;
+}
+
+.footer_texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_texto p{
+    margin-top: 15px;
+}
+
+.footer_logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.teste{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teste div{
+    height: 55%;
+}
+
