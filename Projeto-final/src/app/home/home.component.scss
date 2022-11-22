@@ -4,7 +4,7 @@ body{
     background: #E9EEF7;
 }
 main{
-    max-width: 1440px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -20,18 +20,18 @@ main{
 }
 
 .logo{
-display: flex;
-width: 96px;
-height: 96px;
-left: 605px;
-top: 188px;
-padding: 188px 0px 0px 643px;
-    
+    display: flex;
+    width: 1200px;
+    height: 470px;
+    align-items: center;
+    justify-content: center;   
 }
 .botoes{
 display: flex;
+height: 253px;
 justify-content: space-evenly;
-padding: 330px 0px 0px 60px;
+align-items: center;
+
 }
 
 #login{
@@ -73,7 +73,7 @@ h1{
 
 .Cards{
     display: flex;
-    width: 1440px;
+    width: 1200px;
     justify-content: space-around;
 }
 
