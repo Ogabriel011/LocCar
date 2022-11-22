@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    max-width: 100%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #E9EEF7;
+}
+
+.fazerReserva{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+}
+
+h2{
+    font-family: 'quicksand';
+    font-size: 40px;
+    color: #4A6D84;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.informacoes{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.informacoes mat-form-field mat-label{
+    font-family: 'quicksand';
+    font-size: 20px;
+}
+
+#datas{
+    display: flex;
+    justify-content: space-between;
+}
+
+#datas mat-form-field{
+    font-family: 'quicksand';
+    width: 30%;
+    margin-top: 3%;
+}
+
+#ajusteSelect{
+    display: flex;
+}
+
+#ajusteSelect mat-form-field{
+    width: 65%;
+    padding-right: 5%;
+    font-family: 'quicksand';
+    margin-top: 3%;
+}
+
+
+#cadastro{
+    width: 30%;
+    height: 50px;
+    margin-top: 3%;
+    background-color: #F55E5E;
+    color: white;
+    border: #F55E5E;
+    border-radius: 10px;
+    font-family: 'quicksand';
+    font-size: 24px;
+    transition-duration: 1s;
+}
+
+#cadastro:hover{
+    cursor: pointer;
+    color: #F55E5E;
+    background-color: #ffffff;
+    border:solid 2px #F55E5E;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.reservados{
+    width: 96%;
+    margin-top: 8%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+    border-radius: 10px;
+}
+
+.cadastrado{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 5%
+}
+
+.informacoesCadastro{
+    width: 33%;
+}
+
+.informacoesCadastro p{
+    font-family: 'quicksand';
+    font-size: 24px;
+    color: #4A6D84;
+}
+
+.informacoesCadastro div{
+    margin-top: 10%;
+}
+
+#subtitulo{
+
+    font-family: 'quicksand';
+    font-size: 24px;
+    color: #4A6D84;
+    line-height: 29px
+}
+
+#excluirReserva{
+    width: 25%;
+    height: 50px;
+    margin-right: 2%;
+    color: #F55E5E;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    font-family: 'quicksand';
+    font-size: 24px;
+    transition-duration: 1s;
+}
+
+#excluirReserva:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
