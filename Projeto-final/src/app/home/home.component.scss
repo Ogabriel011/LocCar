@@ -4,7 +4,7 @@ body{
     background: #E9EEF7;
 }
 main{
-    max-width: 1200px;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -21,43 +21,66 @@ main{
 
 .logo{
     display: flex;
-    width: 1200px;
+    width: 1440px;
     height: 470px;
     align-items: center;
     justify-content: center;   
 }
-.botoes{
+.botoes{   
 display: flex;
+width: 1000px;
 height: 253px;
-justify-content: space-evenly;
+
+justify-content: center;
 align-items: center;
+
 
 }
 
 #login{
-display: flex;
-width: 170px;
-height: 50px;
-border-radius: 10px;
-background: #F55E5E;
-color: white;
-font-family: 'Quicksand', sans-serif;
-align-items: center;
-justify-content: center;
-font-size: 24px;
-font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 33px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    left: 650px;
+    top: 612px;
+
+    background: #F55E5E;
+    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+    border-radius: 10px;
+
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;    
 }
 
 #cadastro{
 display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 33px;
+gap: 10px;
+
+position: absolute;
 width: 170px;
 height: 50px;
-border-radius: 10px;
+left: 850px;
+top: 612px;
+
 background: #F55E5E;
-color: white;
+box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+border-radius: 10px;
+
 font-family: 'Quicksand', sans-serif;
-align-items: center;
-justify-content: center;
+color: white;
 font-size: 24px;
 font-weight: bold;
 }
@@ -73,7 +96,7 @@ h1{
 
 .Cards{
     display: flex;
-    width: 1200px;
+    width: 1440px;
     justify-content: space-around;
 }
 
