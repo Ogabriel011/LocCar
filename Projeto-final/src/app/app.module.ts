@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ReservasComponent
+    ReservasComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,9 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
