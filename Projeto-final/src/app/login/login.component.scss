@@ -1,16 +1,55 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .TOL{
     background: #E9EEF7;
     box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
     border-radius: 10px;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p{
+    width: 350px;
+    text-align: center;
 }
 
 .card{
 display: flex;
+font-size: 24px;
+font-family: 'Quicksand', sans-serif;
+color: #040404;
+justify-content: center;
 }
 
 .botao{
     display: flex;
+    justify-content: center;
+    top: 100px;
+}
 
+.botao button{
+    width: 170px;
+    height: 50px;
+    /* Primária */
 
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 24px;
 
+background: #F55E5E;
+box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+border-radius: 10px;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;   
 }
