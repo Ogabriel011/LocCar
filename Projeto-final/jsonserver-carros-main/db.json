@@ -16,11 +16,15 @@
   "locadoras": [
     {
       "id": 1,
-      "nome": "Dois Irmãos"
+      "nome": "Dois Irmãos",
+      "endereco": "Rua Marquês 10 ",
+      "telefone": "(11) 9999-9090"
     },
     {
       "id": 2,
-      "nome": "Tres Irmãos"
+      "nome": "Tres Irmãos",
+      "endereco": "Rua Teste",
+      "telefone": "5512991004845"
     }
   ],
   "carros": [
@@ -30,7 +34,7 @@
       "portas": 4,
       "npessoas": 5,
       "locadoraId": 1,
-      "tipoId" : 2
+      "tipoId": 2
     },
     {
       "id": 2,
@@ -38,7 +42,7 @@
       "portas": 4,
       "npessoas": 5,
       "locadoraId": 1,
-      "tipoId" : 2
+      "tipoId": 2
     },
     {
       "nome": "Gol",
@@ -46,7 +50,7 @@
       "npessoas": "4",
       "locadoraId": "1",
       "id": 3,
-      "tipoId" : 1
+      "tipoId": 1
     }
   ],
   "reservas": [

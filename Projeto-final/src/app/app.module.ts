@@ -6,16 +6,21 @@ import { AppComponent } from './app.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
+import { ReactiveFormsModule } from  '@angular/forms';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { LocadoraComponent } from './components/locadora/locadora.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     LocadoraComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,9 @@ import { LocadoraComponent } from './components/locadora/locadora.component';
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

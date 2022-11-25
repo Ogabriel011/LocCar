@@ -3,6 +3,7 @@ main{
     padding-left: 5%;
     padding-right: 5%;
     background-color: #E9EEF7;
+    padding-bottom: 100px;
 }
 
 .cadastrarLocadora{
@@ -12,6 +13,12 @@ main{
     align-items: center;
     border-radius: 10px;
     box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
+}
+
+.cadastrarLocadora form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 h2{
@@ -67,7 +74,33 @@ h2{
     transition-duration: 1s;
 }
 
-.botaoCadastrar:hover{
+.botaoCadastrar:disabled{
+    background-color:  #CBDBE8;
+    color: #99a1a7;
+}
+
+.botaoCadastrar:hover:enabled{
+    cursor: pointer;
+    color: #F55E5E;
+    background-color: #ffffff;
+    border:solid 2px #F55E5E;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.botaoEditarLocadora{
+    width: 30%;
+    height: 50px;
+    background-color: #F55E5E;
+    color: white;
+    border: #F55E5E;
+    border-radius: 10px;
+    font-family: 'quicksand';
+    font-size: 24px;
+    transition-duration: 1s;
+}
+
+.botaoEditarLocadora:hover{
     cursor: pointer;
     color: #F55E5E;
     background-color: #ffffff;
@@ -104,12 +137,13 @@ h2{
     align-items: center;
     justify-content: space-around;
     padding: 20px;
+    margin-top: 15px;
 }
 
 h3, .locadoras p{
     color: #4A6D84;
     margin: 0;
-    width: 180px;
+    width: 200px;
 }
 
 .locadoras p{
@@ -134,6 +168,12 @@ h3{
     font-size: 20px;
 }
 
+.botao_editar:hover{
+    background: #E9EEF7;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+    border-radius: 10px;
+}
+
 .botao_excluir{
     width: 200px;
     height: 40px;
@@ -144,4 +184,10 @@ h3{
     border-style: none;
     font-weight: 500;
     font-size: 20px;
+}
+
+.botao_excluir:hover{
+    background: #E9EEF7;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+    border-radius: 10px;
 }

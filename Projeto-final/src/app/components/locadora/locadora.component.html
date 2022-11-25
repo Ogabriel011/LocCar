@@ -1,51 +1,54 @@
+<app-header></app-header>
 <main>
-    <form>  
-        <div class="cadastrarLocadora">
-            <h2>Locadora</h2>
-                
+
+    <div class="cadastrarLocadora">
+        <h2>Locadora</h2>
+        <form [formGroup]="form">
             <div class="informacoes">
 
-                <input type="text" required placeholder="Locadora" class="input">
-                
-                <input type="text"  required placeholder="Endereço" class="input">
-                
-                <div class="ajusteTelefone">  
-                    <input type="text" required placeholder="Telefone" class="input">
-                
-                    <button class="botaoCadastrar" type="submit">Cadastrar</button>
+                <input type="text" required placeholder="Locadora" class="input" formControlName="nome">
+
+                <input type="text" required placeholder="Endereço" class="input" formControlName="endereco">
+
+                <div class="ajusteTelefone">
+                    <input type="text" required placeholder="Telefone" class="input" formControlName="telefone">
+
+                    <button class="botaoCadastrar" (click)="salvarDadosLocadoras()" [disabled]="!form.valid" *ngIf="!botaoEditar">Cadastrar</button>
+
+                    <button  class="botaoEditarLocadora" (click)="editarLocadora()" *ngIf="botaoEditar">Editar</button>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
 
     <div class="locadorasCadastradas">
         <h2>Locadoras cadastradas</h2>
-        
+
         <div class="locadoras_geral">
 
-            <div class="locadoras">
+            <div class="locadoras" *ngFor="let dados of locadoras; index as i; trackBy: trackUser">
 
                 <div>
                     <div>
-                        <h3>Locadora Matriz</h3>
+                        <h3>{{dados.nome}}</h3>
                     </div>
                 </div>
 
                 <div>
                     <div>
-                        <p>Rua Marquês, 10
-                            (11) 9999-9090</p>
+                        <p>{{dados.endereco}}</p>
+                        <p>{{dados.telefone}}</p>
                     </div>
                 </div>
 
                 <div>
-                    <button class="botao_editar">Editar</button>
-                    <button class="botao_excluir">Excluir</button>
+                    <button class="botao_editar" (click)="alterarDadosLocadora(dados)">Editar</button>
+                    <button class="botao_excluir" (click)="excluir(dados.id)">Excluir</button>
                 </div>
 
             </div>
         </div>
-
     </div>
 </main>
 <app-footer></app-footer>
