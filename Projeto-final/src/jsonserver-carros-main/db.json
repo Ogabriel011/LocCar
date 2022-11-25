@@ -4,12 +4,14 @@
       "id": 1,
       "nome": "Paulo",
       "email": "paulo@email.com",
+      "senha": "gigachadistrue64",
       "foto": "avatar.png"
     },
     {
       "id": 2,
       "nome": "Priscila",
       "email": "priscila@email.com",
+      "senha": "bundonagostosa69",
       "foto": "avatar.png"
     }
   ],

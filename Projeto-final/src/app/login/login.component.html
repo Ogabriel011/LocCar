@@ -13,11 +13,24 @@
             </p>
 
         </div>
-        <br>
+        <form [formGroup]="form">
+            <br>
+            
+            <input type="email" formControlName="email" name="email" placeholder="Email" required="">
+            
+            <br>
+            
+            <input type="password"  formControlName="senha" name="senha" placeholder="Senha" required="">
+            
+            <br>
 
-        <div class="botao">
-            <button>Login</button>
-        </div>
+            <div class="botao">
+                <button (click)="logar()">Login</button>
+            </div>
 
+            <br>
+
+            <p class="erro">{{erro}}</p>
+        </form>
     </div>
 </main>
