@@ -1,0 +1,40 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Paulo",
+      "email": "paulo@email.com",
+      "foto": "avatar.png"
+    },
+    {
+      "id": 2,
+      "nome": "Priscila",
+      "email": "priscila@email.com",
+      "foto": "avatar.png"
+    }
+  ],
+  "locadoras": [
+    {
+      "id": 1,
+      "nome": "Santa Marcia",
+      "endereco": "Rua Marcia 123",
+      "telefone": "12 99100000"
+    }
+  ],
+  "carros": [],
+  "reservas": [],
+  "tipoCarro": [
+    {
+      "id": 1,
+      "nome": "popular"
+    },
+    {
+      "id": 2,
+      "nome": "sedan"
+    },
+    {
+      "id": 3,
+      "nome": "luxo"
+    }
+  ]
+}
