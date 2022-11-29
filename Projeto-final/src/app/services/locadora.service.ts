@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LocadoraService {
   private listaLocadoras!: any[];
-  private url = 'http://localhost:3000/locadoras';
+  private url = 'https://servidorcarros.glitch.me/locadoras';
 
   constructor(private httpClient: HttpClient) {
     this.listaLocadoras = [];
