@@ -35,15 +35,15 @@ h2{
     padding: 20px;
 }
 
+.informacoes input{
+    margin-top: 10px;
+}
+
+
 .ajusteTelefone{
     display: flex;
+    margin-top: 20px;
 }
-
-.ajusteTelefone input{
-    width: 65%;
-    margin-right: 5%;
-}
-
 
 .input{
     box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
@@ -63,8 +63,8 @@ h2{
 
 
 .botaoCadastrar{
-    width: 30%;
-    height: 50px;
+    width: 60%;
+    height: 40px;
     background-color: #F55E5E;
     color: white;
     border: #F55E5E;
@@ -88,95 +88,8 @@ h2{
 }
 
 
-.botaoEditarLocadora{
-    width: 30%;
-    height: 50px;
-    background-color: #F55E5E;
-    color: white;
-    border: #F55E5E;
-    border-radius: 10px;
-    font-family: 'quicksand';
-    font-size: 24px;
-    transition-duration: 1s;
-}
-
-.botaoEditarLocadora:hover{
-    cursor: pointer;
-    color: #F55E5E;
-    background-color: #ffffff;
-    border:solid 2px #F55E5E;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-
-////////////
-
-.locadorasCadastradas{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 3px 3px 13px #CBDBE8, -3px -3px 13px #FFFFFF;
-    margin-top: 100px;
-}
-
-.locadoras_geral{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.locadoras{
-    width: 85%;
-    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    margin-top: 15px;
-}
-
-h3, .locadoras p{
-    color: #4A6D84;
-    margin: 0;
-    width: 200px;
-}
-
-.locadoras p{
-    font-size:medium ;
-}
-
-h3{
-    font-weight: 500;
-    font-size: 24px;
-}
-
-.botao_editar{
-    width: 200px;
-    height: 40px;
-    color: #39A9F0;
-    background: #E9EEF7;
-    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
-    border-radius: 10px;
-    border-style: none;
-    margin-right: 20px;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.botao_editar:hover{
-    background: #E9EEF7;
-    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
 .botao_excluir{
-    width: 200px;
+    width: 35%;
     height: 40px;
     color: #F55E5E;
     background: #E9EEF7;
@@ -185,6 +98,7 @@ h3{
     border-style: none;
     font-weight: 500;
     font-size: 20px;
+    margin-left: 5%;
 }
 
 .botao_excluir:hover{

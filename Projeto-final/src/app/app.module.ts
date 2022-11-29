@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LocadoraComponent } from './components/locadora/locadora.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     LocadoraComponent,
     HeaderComponent,
+    PerfilUsuarioComponent,
   ],
   imports: [
     BrowserModule,
