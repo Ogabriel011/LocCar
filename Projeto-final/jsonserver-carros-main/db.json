@@ -16,61 +16,13 @@
   "locadoras": [
     {
       "id": 1,
-      "nome": "Dois Irmãos",
-      "endereco": "Rua Marquês 10 ",
-      "telefone": "(11) 9999-9090"
-    },
-    {
-      "id": 2,
-      "nome": "Tres Irmãos",
-      "endereco": "Rua Teste",
-      "telefone": "5512991004845"
+      "nome": "Santa Marcia",
+      "endereco": "Rua Marcia 123",
+      "telefone": "12 99100000"
     }
   ],
-  "carros": [
-    {
-      "id": 1,
-      "nome": "Ford Fusion",
-      "portas": 4,
-      "npessoas": 5,
-      "locadoraId": 1,
-      "tipoId": 2
-    },
-    {
-      "id": 2,
-      "nome": "Ford Focus",
-      "portas": 4,
-      "npessoas": 5,
-      "locadoraId": 1,
-      "tipoId": 2
-    },
-    {
-      "nome": "Gol",
-      "portas": "4",
-      "npessoas": "4",
-      "locadoraId": "1",
-      "id": 3,
-      "tipoId": 1
-    }
-  ],
-  "reservas": [
-    {
-      "id": 1,
-      "data": "2022-05-20",
-      "horario": "15:00",
-      "dataentrega": "2022-05-25",
-      "usuarioId": 1,
-      "carroId": 1
-    },
-    {
-      "id": 2,
-      "data": "2022-05-21",
-      "horario": "15:00",
-      "dataentrega": "2022-05-25",
-      "usuarioId": 2,
-      "carroId": 1
-    }
-  ],
+  "carros": [],
+  "reservas": [],
   "tipoCarro": [
     {
       "id": 1,

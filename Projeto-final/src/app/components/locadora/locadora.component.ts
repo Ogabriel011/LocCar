@@ -42,9 +42,16 @@ export class LocadoraComponent implements OnInit {
   }
 
   salvarDadosLocadoras() {
+    
+    let id: number;
 
-    let id: number = (this.locadoras[this.locadoras.length - 1].id) + 1;
-
+    if (this.locadoras.length === 0) {
+      id = 1
+    }
+    else{
+      id = (this.locadoras[this.locadoras.length - 1].id) + 1; 
+    }
+    
     let valores: Locadoras = { id: id, nome: this.form.value.nome, endereco: this.form.value.endereco, telefone: this.form.value.telefone}
 
     this.locadoraService.salvarLocadoras(valores).subscribe({
