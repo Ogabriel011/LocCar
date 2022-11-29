@@ -11,12 +11,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReservasClienteComponent } from './pages/componentes/reservas-cliente/reservas-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ReservasComponent,
+    ReservasClienteComponent,
   ],
   imports: [
     BrowserModule,

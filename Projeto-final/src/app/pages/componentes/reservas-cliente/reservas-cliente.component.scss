@@ -35,7 +35,7 @@ h2{
     
 }
 
-.input_modelo{
+.carro{
     width: 100%;
     height: 50px;
     background: #E9EEF7;
@@ -48,7 +48,7 @@ h2{
     padding-left: 2%;
 }
 
-.input_modelo:focus{
+.carro:focus{
     outline: none;
     background: #E9EEF7;
     box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
@@ -179,8 +179,15 @@ h2{
     line-height: 29px
 }
 
+.botoes{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+}
+
 #excluirReserva{
-    width: 25%;
+    width: 80%;
     height: 50px;
     margin-right: 2%;
     color: #F55E5E;
@@ -194,6 +201,26 @@ h2{
 }
 
 #excluirReserva:hover{
+    cursor: pointer;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
+}
+
+#editarReserva{
+    width: 80%;
+    height: 50px;
+    margin-bottom:5% ;
+    margin-right: 2%;
+    color: #39A9F0;
+    background: #E9EEF7;
+    box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    font-family: 'quicksand';
+    font-size: 24px;
+    transition-duration: 1s;
+}
+
+#editarReserva:hover{
     cursor: pointer;
     box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.78), inset 3px 3px 6px #CBDBE8;
 }

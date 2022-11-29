@@ -7,7 +7,10 @@
                 
             <div class="informacoes">
                 <div>
-                    <input type="text"  class="input_modelo" placeholder="Modelo do carro" formControlName="modelo" required>
+                    <select class="carro" name="carroId" id="carroId">
+                        <option value="0" disabled selected>Modelo do Carro</option>
+                        <option [value]="item.carroId" *ngFor="let item of ; index as i">{{item.carro.nome}}</option>
+                    </select>
                 </div>
                 
 
@@ -25,7 +28,6 @@
                     <select disableRipple class="select" required>
                         <option value="0" disabled selected>Selecione a locadora filial</option>
                         <option value="1">Dois Irmãos</option>
-                         <option value="2">Tres Irmãos</option>
                     </select>
 
                     <button id="cadastro" (click)="FazerReserva()" type="submit"><b>Cadastrar</b></button>
@@ -34,7 +36,7 @@
         </div>
 
         <div class="reservados">
-            <h2>Reservas Cadastradas</h2>
+            <h2>Minhas Reservas</h2>
             <div class="linha"></div>
 
             <div class="cadastrado" *ngFor="let item of reservas; index as i;">
@@ -52,7 +54,11 @@
 
                 </div>
 
-                <button id="excluirReserva" (click)="ExcluirReserva(item.id)" type="submit"><b>Excluir reserva</b></button>
+                <div class="botoes">
+                    <button id="editarReserva" (click)="InputarDadosReserva(item)" type="submit"><b>Editar</b></button>
+                    <button id="excluirReserva" (click)="ExcluirReserva(item.id)" type="submit"><b>Excluir reserva</b></button>
+
+                </div>
 
             </div>
         </div>

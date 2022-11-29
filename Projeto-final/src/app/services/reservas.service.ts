@@ -9,7 +9,7 @@ import { Reserva } from '../models/reservas.models';
 export class ReservasService {
 
   private listaReservas:any[];
-  private url = 'http://localhost:3004/reservas'
+  private url = 'https://servidorcarros.glitch.me/reservas?_expand=carro'
 
   constructor(private httpCliente: HttpClient) {
     this.listaReservas = [];
@@ -29,5 +29,9 @@ export class ReservasService {
 
   ExcluirReserva(idReserva:any):Observable<any>{
     return this.httpCliente.delete<any>(`${this.url}/${idReserva}`)
+  }
+
+  EditarReserva(reserva: Reserva): Observable<Reserva>{
+    return this.httpCliente.put<Reserva>(`${this.url}/${reserva.id}`, reserva)
   }
 }

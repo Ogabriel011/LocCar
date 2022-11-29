@@ -6,5 +6,7 @@ export interface Reserva{
     horario:Time,
     dataentrega: Date,
     usuarioId: number,
-    carroId: number
+    carroId: number,
+    carro?:any
 }
+
