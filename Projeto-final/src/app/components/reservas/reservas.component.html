@@ -3,7 +3,7 @@
 <main>
     <form [formGroup]="form">  
         <div class="fazerReserva">
-            <h2>Reservas</h2>
+            <h2><b>Reservas</b></h2>
                 
             <div class="informacoes">
                 <div>
@@ -28,7 +28,7 @@
                         <option value="2">Tres Irmãos</option>
                     </select>
 
-                    <button id="cadastro" (click)="FazerReserva()" type="submit"><b>Cadastrar</b></button>
+                    <button id="cadastro" (click)="FazerReserva()" type="submit" [disabled]="!form.valid"><b>Cadastrar</b></button>
                 </div>
             </div>
         </div>
