@@ -15,23 +15,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-
-import { HeaderComponent } from './pages/componentes/header/header.component';
-import { ReservasComponent } from './pages/componentes/reservas/reservas.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
-import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ReservasClienteComponent } from './pages/componentes/reservas-cliente/reservas-cliente.component';
+import { ReservasComponent } from './components/reservas/reservas.component';
+import { ReservasClienteComponent } from './components/reservas-cliente/reservas-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     LocadoraComponent,
-    HeaderComponent,
     PerfilUsuarioComponent,
     HeaderComponent,
     ReservasComponent,
@@ -45,14 +36,13 @@ import { ReservasClienteComponent } from './pages/componentes/reservas-cliente/r
     MatCardModule,
     MatSelectModule,
     ReactiveFormsModule,
-    HttpClientModule
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatSelectModule,
     MatCardModule,
-    HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
