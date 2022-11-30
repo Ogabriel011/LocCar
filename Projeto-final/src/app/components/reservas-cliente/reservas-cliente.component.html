@@ -7,9 +7,9 @@
                 
             <div class="informacoes">
                 <div>
-                    <select class="carro" name="carroId" id="carroId">
+                    <select class="carro" name="carroId" id="carroId" formControlName="carroId">
                         <option value="0" disabled selected>Modelo do Carro</option>
-                        <option [value]="item.carroId" *ngFor="let item of ; index as i">{{item.carro.nome}}</option>
+                        <option [value]="item.id" *ngFor="let item of carros; index as i">{{item.nome}}</option>
                     </select>
                 </div>
                 
@@ -30,7 +30,8 @@
                         <option value="1">Dois Irmãos</option>
                     </select>
 
-                    <button id="cadastro" (click)="FazerReserva()" type="submit"><b>Cadastrar</b></button>
+                    <button class="cadastro_editar" (click)="FazerReserva()" *ngIf="!verificarEditar" type="submit"><b>Cadastrar</b></button>
+                    <button class="cadastro_editar" (click)="EditarReserva()" *ngIf="verificarEditar" type="submit"><b>Editar</b></button>
                 </div>
             </div>
         </div>
