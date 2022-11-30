@@ -14,6 +14,7 @@ import { LocadoraComponent } from './components/locadora/locadora.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuar
     MatCardModule,
     MatSelectModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
