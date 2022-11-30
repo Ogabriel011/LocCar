@@ -13,9 +13,10 @@
                 <div class="ajusteTelefone">
                     <input type="text" required placeholder="Telefone" class="input" formControlName="telefone">
 
-                    <button class="botaoCadastrar" (click)="salvarDadosLocadoras()" [disabled]="!form.valid" *ngIf="!botaoEditar">Cadastrar</button>
+                    <button class="botaoCadastrar" (click)="salvarDadosLocadoras()" [disabled]="!form.valid"
+                        *ngIf="!botaoEditar">Cadastrar</button>
 
-                    <button  class="botaoEditarLocadora" (click)="editarLocadora()" *ngIf="botaoEditar">Editar</button>
+                    <button class="botaoEditarLocadora" (click)="editarLocadora()" *ngIf="botaoEditar">Editar</button>
                 </div>
             </div>
         </form>
@@ -43,10 +44,25 @@
                 </div>
 
                 <div>
-                    <button class="botao_editar" (click)="alterarDadosLocadora(dados)">Editar</button>
-                    <button class="botao_excluir" (click)="excluir(dados.id)">Excluir</button>
-                </div>
+                    <button class="botao_editar" [swal]="{
+                        title:'ATENÇÃO',
+                        text: 'Você realmente deseja editar '+dados.nome+'?',
+                        showDenyButton: true,
+                        denyButtonText: 'não',
+                        confirmButtonText: 'sim',
+                        icon: 'info'
+                    }" (confirm)="alterarDadosLocadora(dados)">Editar</button>
 
+                    <button class="botao_excluir" [swal]="{
+                        title:'ATENÇÃO',
+                        text: 'Você realmente deseja excluir '+dados.nome+'?',
+                        showDenyButton: true,
+                        denyButtonText: 'não',
+                        confirmButtonText: 'sim',
+                        icon: 'warning'
+                    }" (confirm)="excluir(dados.id)">Excluir</button>
+
+                </div>
             </div>
         </div>
     </div>

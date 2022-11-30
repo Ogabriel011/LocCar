@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Locadoras } from 'src/app/models/locadora.model';
 import { LocadoraService } from 'src/app/services/locadora.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-locadora',
@@ -58,6 +60,14 @@ export class LocadoraComponent implements OnInit {
       next: () => {
         this.listarLocadoras();
         console.log("salvou");
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Locadora Cadastrada!'
+        })
       },
       error: () => {
         console.log("erro em Salvar Locadoras");
@@ -70,6 +80,14 @@ export class LocadoraComponent implements OnInit {
       next: () => {
         console.log("excluiu");
         this.listarLocadoras();
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Locadora excluida!'
+        })
       },
       error: () => {
         console.log("erro em excluir");
@@ -94,6 +112,14 @@ export class LocadoraComponent implements OnInit {
       next: () => {
         this.listarLocadoras()
         console.log("editou");
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Locadora Editada!'
+        })
       },
       error: () => {
         console.log("erro em editar");

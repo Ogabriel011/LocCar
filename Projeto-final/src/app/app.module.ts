@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LocadoraComponent } from './components/locadora/locadora.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { HeaderComponent } from './pages/componentes/header/header.component';
 import { ReservasComponent } from './pages/componentes/reservas/reservas.component';
@@ -30,6 +32,7 @@ import { ReservasClienteComponent } from './pages/componentes/reservas-cliente/r
     FooterComponent,
     LocadoraComponent,
     HeaderComponent,
+    PerfilUsuarioComponent,
     HeaderComponent,
     ReservasComponent,
     ReservasClienteComponent,
@@ -42,6 +45,7 @@ import { ReservasClienteComponent } from './pages/componentes/reservas-cliente/r
     MatCardModule,
     MatSelectModule,
     ReactiveFormsModule,
+    HttpClientModule
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
