@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class usuarioService {
   // URL
-  private url = 'http://localhost:3004/usuario'
+  private url = 'https://servidorcarros.glitch.me/usuarios?_expand=tipo'
 
   // O Que o Componente precisa 
   constructor(private http: HttpClient) { }

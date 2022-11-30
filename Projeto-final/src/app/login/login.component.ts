@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { LocalStorageService } from '../Services/local-storage.service';
 import { usuarioService } from '../Services/usuarios.service'
 
 @Component({
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   erro: string = "";
 
-  constructor(private formBuilder: FormBuilder, private logarUsers: usuarioService) { }
+  constructor(private formBuilder: FormBuilder, private logarUsers: usuarioService, private localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
     // Chamar as funções de Login
@@ -50,6 +51,16 @@ export class LoginComponent implements OnInit {
 
         console.log("Login Feito Com Sucesso");
 
+        this.localStorage.set("id", usuario.id)
+
+        this.localStorage.set("email", usuario.email)
+
+        this.localStorage.set("telefone", usuario.telefone)
+        
+        console.log(this.localStorage.get("email"));
+        console.log(this.localStorage.get("id"));
+        console.log(this.localStorage.get("telefone"));
+        
         return
       } 
       
