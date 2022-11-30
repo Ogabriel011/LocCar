@@ -1,0 +1,42 @@
+<app-header></app-header>
+<main>
+    <!-- <form [formGroup]="form"> -->
+        <div class="card">
+            <h2><b>Carros</b></h2>
+
+            <div class="informacoes">
+                <input type="text" name="carros" class="carros" placeholder="Nome do carro" formControlName="carros">
+
+                <select name="tipo_carro" class="tipo_carro" formControlName="tipo_carro">
+                    <option value="0" disabled>Selecione o tipo</option>
+                </select>
+
+                <div class="portas_pessoas">
+                    <input type="number" name="num_portas" class="portas" placeholder="Portas" formControlName="num_portas">
+                    <input type="number" name="pessoas" class="pessoas" placeholder="Núm de pessoas" formControlName="pessoas">
+                </div>
+
+                <div class="selector_e_botao">
+                    <select name="locadora" class="locadora" formControlName="locadora">
+                        <option value="0" disabled>Selecione a locadora</option>
+                    </select>
+
+                    <button class="cadastrar_editar" type="submit">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carros_cadastrados">
+            <div class="popular">
+                <h2><b>Popular</b></h2>
+                <div class="linha"></div>
+
+                <div class="carrosPopular">
+                    <img src="../../../../assets/car3 2.png">
+
+                    
+                </div>
+            </div>
+        </div>
+    <!-- </form> -->
+</main>

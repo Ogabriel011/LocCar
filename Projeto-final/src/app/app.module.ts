@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReservasClienteComponent } from './pages/componentes/reservas-cliente/reservas-cliente.component';
+import { CarrosComponent } from './pages/componentes/carros/carros.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReservasClienteComponent } from './pages/componentes/reservas-cliente/r
     HeaderComponent,
     ReservasComponent,
     ReservasClienteComponent,
+    CarrosComponent,
   ],
   imports: [
     BrowserModule,

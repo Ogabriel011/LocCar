@@ -108,7 +108,7 @@ h2{
     border-radius: 10px;
 }
 
-#cadastro{
+.cadastro_editar{
     width: 30%;
     height: 50px;
     background-color: #F55E5E;
@@ -120,7 +120,7 @@ h2{
     transition-duration: 1s;
 }
 
-#cadastro:hover{
+.cadastro_editar:hover{
     cursor: pointer;
     color: #F55E5E;
     background-color: #ffffff;

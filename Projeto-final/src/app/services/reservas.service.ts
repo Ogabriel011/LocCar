@@ -9,7 +9,7 @@ import { Reserva } from '../models/reservas.models';
 export class ReservasService {
 
   private listaReservas:any[];
-  private url = 'https://servidorcarros.glitch.me/reservas?_expand=carro'
+  private url = 'https://servidorcarros.glitch.me/reservas'
 
   constructor(private httpCliente: HttpClient) {
     this.listaReservas = [];
@@ -20,7 +20,7 @@ export class ReservasService {
   }
 
   LerReservados():Observable<Reserva[]>{
-    return this.httpCliente.get<Reserva[]>(`${this.url}`)
+    return this.httpCliente.get<Reserva[]>(`${this.url}?_expand=carro`)
   }
 
   CadastrarReserva(reserva: Reserva):Observable<Reserva>{

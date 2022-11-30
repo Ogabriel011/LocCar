@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Reserva } from 'src/app/models/reservas.models';
+import { Carros, Reserva } from 'src/app/models/reservas.models';
+import { CarrosService } from 'src/app/services/carros.service';
 import { ReservasService } from 'src/app/services/reservas.service';
 
 @Component({
@@ -10,14 +11,16 @@ import { ReservasService } from 'src/app/services/reservas.service';
 })
 export class ReservasClienteComponent implements OnInit {
 
-  form!:FormGroup;
+  form!: FormGroup;
   reservas!: Reserva[];
-  guardarId!:number;
-  verificarEditar:boolean = false;
+  carros!: Carros[];
+  guardarId! :number;
+  verificarEditar: boolean = false;
 
   constructor(
     private FormBuilder: FormBuilder,
-    private ReservaService: ReservasService
+    private ReservaService: ReservasService,
+    private CarrosService: CarrosService
   ) { }
 
   ngOnInit(): void {
@@ -26,11 +29,16 @@ export class ReservasClienteComponent implements OnInit {
       data: new FormControl('',),
       horario: new FormControl('',),
       dataentrega: new FormControl('',),
-      filial: new FormControl('',)
+      filial: new FormControl('',),
+      carroId: new FormControl('',)
     })
+
+    this.form.controls['carroId'].setValue(0)
+
     this.form.valueChanges.subscribe(console.log)
 
     this.MostrarReservas()
+    this.MostrarCarros()
   }
 
   MostrarReservas(){
@@ -41,6 +49,18 @@ export class ReservasClienteComponent implements OnInit {
       },
       error: () => {
         console.log('Erro')
+      }
+    })
+  }
+
+  MostrarCarros(){
+    this.CarrosService.LerCarros().subscribe({
+      next: (carros: Carros[]) => {
+        this.carros = carros
+        console.log(carros)
+      },
+      error: () => {
+        console.log("erro carros")
       }
     })
   }
@@ -85,8 +105,36 @@ export class ReservasClienteComponent implements OnInit {
     this.form.controls["horario"].setValue(itemReserva.horario)
     this.form.controls["dataentrega"].setValue(itemReserva.dataentrega)
     this.form.controls["carroId"].setValue(itemReserva.carroId)
+    console.log(itemReserva.carroId)
 
     this.verificarEditar = true
+  }
+
+  EditarReserva(){
+    const id = this.guardarId
+    const carroId = this.form.controls['carroId'].value
+    const data = this.form.controls['data'].value
+    const horario = this.form.controls['horario'].value
+    const dataentrega = this.form.controls['dataentrega'].value
+    const usuarioId = 1
+
+    const reserva = {id:id, carroId:carroId, data:data, horario:horario, dataentrega:dataentrega, usuarioId:usuarioId}
+
+    this.ReservaService.EditarReserva(reserva).subscribe({
+      next: () => {
+        console.log('editado')
+        this.MostrarReservas()
+      },
+      error: () => {
+        console.log("erro editar")
+      }
+
+    })
+
+    this.verificarEditar = false
+    this.form.reset()
+    this.form.controls['carroId'].setValue(0)
+
   }
 
 }
