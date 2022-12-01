@@ -1,0 +1,36 @@
+<main>
+
+    <div class="imagem">
+        <img src="../../assets/Group 3.png" alt="Arte é Algo Inexplicável arte Não Faz Sentido Não dá Brecha">
+    </div>
+
+    <!-- Tela de Login = TDL -->
+    <div class=TDL>
+        <div class="card">
+
+            <p>
+                Este portal oferece uma experiência única, segura e oferta um serviço de qualidade!
+            </p>
+
+        </div>
+        <form [formGroup]="form">
+            <br>
+            
+            <input type="email" formControlName="email" name="email" placeholder="Email" required="">
+            
+            <br>
+            
+            <input type="password"  formControlName="senha" name="senha" placeholder="Senha" required="">
+            
+            <br>
+
+            <div class="botao">
+                <button (click)="logar()">Login</button>
+            </div>
+
+            <br>
+
+            <p class="erro">{{erro}}</p>
+        </form>
+    </div>
+</main>

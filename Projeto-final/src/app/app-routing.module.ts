@@ -5,7 +5,10 @@ import { ReservasComponent } from "./components/reservas/reservas.component";
 import { PerfilUsuarioComponent } from "./components/perfil-usuario/perfil-usuario.component";
 import { ReservasClienteComponent } from "./components/reservas-cliente/reservas-cliente.component";
 import { CarrosComponent } from './components/carros/carros.component';
-    
+import { CarrosClienteComponent } from './carros-cliente/carros-cliente.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
   {

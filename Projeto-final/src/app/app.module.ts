@@ -18,10 +18,15 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ReservasComponent } from './components/reservas/reservas.component';
 import { ReservasClienteComponent } from './components/reservas-cliente/reservas-cliente.component';
 import { CarrosComponent } from './components/carros/carros.component';
-
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { CarrosClienteComponent } from './carros-cliente/carros-cliente.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    LoginComponent,
+    CarrosClienteComponent,
     FooterComponent,
     LocadoraComponent,
     PerfilUsuarioComponent,
