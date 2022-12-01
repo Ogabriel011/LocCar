@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Carros, Reserva } from 'src/app/models/reservas.models';
 import { CarrosService } from 'src/app/services/carros.service';
 import { ReservasService } from 'src/app/services/reservas.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-reservas-cliente',
@@ -54,7 +55,7 @@ export class ReservasClienteComponent implements OnInit {
   }
 
   MostrarCarros(){
-    this.CarrosService.LerCarros().subscribe({
+    this.CarrosService.GetCarros().subscribe({
       next: (carros: Carros[]) => {
         this.carros = carros
         console.log(carros)
@@ -80,6 +81,14 @@ export class ReservasClienteComponent implements OnInit {
         console.log('Sucesso')
         this.MostrarReservas()
         this.form.reset()
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Reserva Cadastrada!'
+        })
       },
       error: () => {
         console.log('Erro')
@@ -92,6 +101,14 @@ export class ReservasClienteComponent implements OnInit {
       next:() => {
         console.log("Excluiu")
         this.MostrarReservas()
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Reserva excluida!'
+        })
       },
       error:()=>{
         console.log("não excluiu")
@@ -124,6 +141,14 @@ export class ReservasClienteComponent implements OnInit {
       next: () => {
         console.log('editado')
         this.MostrarReservas()
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Reserva Editada!'
+        })
       },
       error: () => {
         console.log("erro editar")

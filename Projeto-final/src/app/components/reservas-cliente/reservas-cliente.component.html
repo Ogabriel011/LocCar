@@ -30,7 +30,7 @@
                         <option value="1">Dois Irmãos</option>
                     </select>
 
-                    <button class="cadastro_editar" (click)="FazerReserva()" *ngIf="!verificarEditar" type="submit"><b>Cadastrar</b></button>
+                    <button class="cadastro_editar" (click)="FazerReserva()" *ngIf="!verificarEditar" type="submit" [disabled]="!form.valid"><b>Cadastrar</b></button>
                     <button class="cadastro_editar" (click)="EditarReserva()" *ngIf="verificarEditar" type="submit"><b>Editar</b></button>
                 </div>
             </div>
@@ -56,8 +56,22 @@
                 </div>
 
                 <div class="botoes">
-                    <button id="editarReserva" (click)="InputarDadosReserva(item)" type="submit"><b>Editar</b></button>
-                    <button id="excluirReserva" (click)="ExcluirReserva(item.id)" type="submit"><b>Excluir reserva</b></button>
+                    <button id="editarReserva" [swal]="{
+                        title:'ATENÇÃO',
+                        text: 'Você realmente deseja editar '+item.carro.nome+'?',
+                        showDenyButton: true,
+                        denyButtonText: 'não',
+                        confirmButtonText: 'sim',
+                        icon: 'info'
+                    }" (confirm)="InputarDadosReserva(item)" type="submit"><b>Editar</b></button>
+                    <button id="excluirReserva" [swal]="{
+                        title:'ATENÇÃO',
+                        text: 'Você realmente deseja excluir '+item.carro.nome+'?',
+                        showDenyButton: true,
+                        denyButtonText: 'não',
+                        confirmButtonText: 'sim',
+                        icon: 'warning'
+                    }" (confirm)="ExcluirReserva(item.id)" type="submit"><b>Excluir reserva</b></button>
 
                 </div>
 

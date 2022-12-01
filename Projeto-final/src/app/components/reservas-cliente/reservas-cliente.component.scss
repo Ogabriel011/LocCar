@@ -120,7 +120,12 @@ h2{
     transition-duration: 1s;
 }
 
-.cadastro_editar:hover{
+.cadastro_editar:disabled{
+    background-color:  #CBDBE8;
+    color: #99a1a7;
+}
+
+.cadastro_editar:hover:enabled{
     cursor: pointer;
     color: #F55E5E;
     background-color: #ffffff;

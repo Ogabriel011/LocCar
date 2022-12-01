@@ -5,18 +5,21 @@ import { ReservasComponent } from "./components/reservas/reservas.component";
 import { PerfilUsuarioComponent } from "./components/perfil-usuario/perfil-usuario.component";
 import { ReservasClienteComponent } from "./components/reservas-cliente/reservas-cliente.component";
 import { CarrosComponent } from './components/carros/carros.component';
-import { CarrosClienteComponent } from './carros-cliente/carros-cliente.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { CarrosClienteComponent } from './components/carros-cliente/carros-cliente.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'locadoras', pathMatch: 'full'
+    path: '', redirectTo: 'home', pathMatch: 'full'
   },
-  // {
-  //   path: 'home', component: HomeComponent
-  // },
+  {
+    path: 'home', component: HomeComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
   {
     path: 'locadoras', component: LocadoraComponent
   },
@@ -31,6 +34,9 @@ const routes: Routes = [
   },
   {
     path: 'reservas-cliente', component: ReservasClienteComponent
+  },
+  {
+    path: 'carros-cliente', component: CarrosClienteComponent
   }
 ];
 

@@ -1,13 +1,11 @@
-body{
-    background: #E9EEF7;
-}
-
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    background-color: #E9EEF7;
+    height: 100%;
+    padding-bottom: 80px;
 }
 
 .TDL{
@@ -48,6 +46,8 @@ height: 50px;
 background: #E9EEF7;
 box-shadow: 3px 3px 7px #CBDBE8, -3px -3px 5px #FFFFFF;
 border-radius: 10px;
+
+border: none;
 }
 
 .botao{
@@ -68,6 +68,7 @@ border-radius: 10px;
 background: #F55E5E;
 box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
 border-radius: 10px;
+border: none;
 }
 
 .imagem{
