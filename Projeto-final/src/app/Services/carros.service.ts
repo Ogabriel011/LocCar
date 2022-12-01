@@ -7,13 +7,17 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root'
 })
 export class CarrosService {
-  private url = 'https://servidorcarros.glitch.me/carros'
+  private url = 'https://servidorcarros.glitch.me'
 
   constructor(private http: HttpClient) { 
 
   }
 
-  GetCarros(): Observable<any>{
-    return this.http.get(`${this.url}`)
+  Getcarros(): Observable<any>{
+    return this.http.get(`${this.url}/Carros`)
+  }
+
+  GetTipocarros(): Observable<any>{
+    return  this.http.get(`${this.url}/tipoCarros`)
   }
 }
