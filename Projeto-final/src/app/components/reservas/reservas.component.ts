@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Reserva } from 'src/app/models/reservas.models';
 import { ReservasService } from 'src/app/services/reservas.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-reservas',
@@ -59,6 +60,14 @@ export class ReservasComponent implements OnInit {
         console.log('Sucesso')
         this.MostrarReservas()
         this.form.reset()
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Reserva Cadastrada!'
+        })
       },
       error: () => {
         console.log('Erro')
@@ -71,6 +80,14 @@ export class ReservasComponent implements OnInit {
       next:() => {
         console.log("Excluiu")
         this.MostrarReservas()
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 5000,
+          title: 'Reserva excluida!'
+        })
       },
       error:()=>{
         console.log("não excluiu")

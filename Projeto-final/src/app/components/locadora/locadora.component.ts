@@ -60,6 +60,7 @@ export class LocadoraComponent implements OnInit {
       next: () => {
         this.listarLocadoras();
         console.log("salvou");
+        this.form.reset()
         Swal.fire({
           toast: true,
           position: 'top',

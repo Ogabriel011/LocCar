@@ -52,9 +52,17 @@
 
                 </div>
 
-                <button id="excluirReserva" (click)="ExcluirReserva(item.id)" type="submit"><b>Excluir reserva</b></button>
+                <button id="excluirReserva"  [swal]="{
+                    title:'ATENÇÃO',
+                    text: 'Você realmente deseja excluir '+item.carro.nome+'?',
+                    showDenyButton: true,
+                    denyButtonText: 'não',
+                    confirmButtonText: 'sim',
+                    icon: 'warning'
+                }" (confirm)="ExcluirReserva(item.id)" type="submit"><b>Excluir reserva</b></button>
 
             </div>
         </div>
     </form>
 </main>
+<app-footer></app-footer>

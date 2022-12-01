@@ -17,7 +17,7 @@ import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuar
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ReservasComponent } from './components/reservas/reservas.component';
 import { ReservasClienteComponent } from './components/reservas-cliente/reservas-cliente.component';
-import { CarrosComponent } from './pages/componentes/carros/carros.component';
+import { CarrosComponent } from './components/carros/carros.component';
 
 @NgModule({
   declarations: [
