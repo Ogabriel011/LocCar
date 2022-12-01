@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Carros, Reserva } from 'src/app/models/reservas.models';
 import { CarrosService } from 'src/app/services/carros.service';
+import { LocadoraService } from 'src/app/services/locadora.service';
 import { ReservasService } from 'src/app/services/reservas.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class ReservasClienteComponent implements OnInit {
   constructor(
     private FormBuilder: FormBuilder,
     private ReservaService: ReservasService,
-    private CarrosService: CarrosService
+    private CarrosService: CarrosService,
   ) { }
 
   ngOnInit(): void {
@@ -34,8 +35,6 @@ export class ReservasClienteComponent implements OnInit {
     })
 
     this.form.controls['carroId'].setValue(0)
-
-    this.form.valueChanges.subscribe(console.log)
 
     this.MostrarReservas()
     this.MostrarCarros()
@@ -105,7 +104,6 @@ export class ReservasClienteComponent implements OnInit {
     this.form.controls["horario"].setValue(itemReserva.horario)
     this.form.controls["dataentrega"].setValue(itemReserva.dataentrega)
     this.form.controls["carroId"].setValue(itemReserva.carroId)
-    console.log(itemReserva.carroId)
 
     this.verificarEditar = true
   }

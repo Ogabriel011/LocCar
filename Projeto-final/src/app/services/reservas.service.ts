@@ -24,7 +24,7 @@ export class ReservasService {
   }
 
   CadastrarReserva(reserva: Reserva):Observable<Reserva>{
-    return this.httpCliente.post<Reserva>(this.url, reserva)
+    return this.httpCliente.post<Reserva>(`${this.url}`, reserva)
   }
 
   ExcluirReserva(idReserva:any):Observable<any>{
