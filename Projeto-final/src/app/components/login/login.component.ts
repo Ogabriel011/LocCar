@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { LocalStorageService } from '../../Services/local-storage.service'
 import { usuarioService } from "../../Services/usuarios.service"
 
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   erro: string = "";
 
-  constructor(private formBuilder: FormBuilder, private logarUsers: usuarioService, private localStorage: LocalStorageService) { }
+  constructor(private formBuilder: FormBuilder, private logarUsers: usuarioService, private localStorage: LocalStorageService, private router: Router) { }
 
   ngOnInit(): void {
     // Chamar as funções de Login
@@ -51,15 +52,16 @@ export class LoginComponent implements OnInit {
 
         console.log("Login Feito Com Sucesso");
 
-        this.localStorage.set("id", usuario.id)
+        this.localStorage.set("usuario", JSON.stringify(usuario))
 
-        this.localStorage.set("email", usuario.email)
+        console.log(this.localStorage.get("usuario"));
 
-        this.localStorage.set("telefone", usuario.telefone)
-        
-        console.log(this.localStorage.get("email"));
-        console.log(this.localStorage.get("id"));
-        console.log(this.localStorage.get("telefone"));
+        if (usuario.tipoId === 1 ) {
+          this.router.navigateByUrl("/carros")
+        }
+        else{
+          this.router.navigateByUrl("/carros-cliente")
+        }
         
         return
       } 
@@ -67,9 +69,4 @@ export class LoginComponent implements OnInit {
       }
       this.erro = "Email ou Senha Incorretos, Tente Novamente"
     }
-    
-      
-
- 
-
 }
