@@ -1,7 +1,7 @@
 import { identifierName } from '@angular/compiler';
 import { Component, isDevMode, OnInit } from '@angular/core';
-import { CarrosService } from '../Services/carros.service';
-import { LocalStorageService } from '../Services/local-storage.service';
+import { CarrosService } from '../services/carros-cliente.service';
+import { LocalStorageService } from '../services/local-storage.service';
 
 @Component({
   selector: 'app-carros-cliente',

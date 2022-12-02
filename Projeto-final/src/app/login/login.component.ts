@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { LocalStorageService } from '../Services/local-storage.service';
-import { usuarioService } from '../Services/usuarios.service'
+import { LocalStorageService } from '../services/local-storage.service';
+import { usuarioService } from '../services/usuarios.service'
 
 @Component({
   selector: 'app-login',
