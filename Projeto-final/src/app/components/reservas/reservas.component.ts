@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Reserva } from 'src/app/models/reservas.models';
-import { ReservasService } from 'src/app/services/reservas.service';
+import { ReservasService } from 'src/app/Services/reservas.service';
 import Swal from 'sweetalert2';
 
 @Component({

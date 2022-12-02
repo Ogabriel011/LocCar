@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Carros, Locadoras, TipoCarro } from 'src/app/models/reservas.models';
 import { CarrosService } from 'src/app/services/carros.service';
-import { LocadoraService } from 'src/app/services/locadora.service';
-import { TipoCarroService } from 'src/app/services/tipo-carro.service';
+import { LocadoraService } from 'src/app/Services/locadora.service';
+import { TipoCarroService } from 'src/app/Services/tipo-carro.service';
 
 @Component({
   selector: 'app-carros',

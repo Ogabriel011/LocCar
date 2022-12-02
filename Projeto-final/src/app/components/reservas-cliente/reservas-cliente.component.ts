@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Carros, Reserva } from 'src/app/models/reservas.models';
-import { CarrosService } from 'src/app/services/carros.service';
-import { ReservasService } from 'src/app/services/reservas.service';
+import { CarrosService } from 'src/app/Services/carros.service';
+import { ReservasService } from 'src/app/Services/reservas.service';
 import Swal from 'sweetalert2';
 
 @Component({

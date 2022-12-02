@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Locadoras } from 'src/app/models/reservas.models';
-import { LocadoraService } from 'src/app/services/locadora.service';
+import { LocadoraService } from 'src/app/Services/locadora.service';
 import Swal from 'sweetalert2';
 
 
