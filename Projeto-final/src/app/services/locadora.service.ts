@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Locadoras } from '../models/locadora.model';
+import { Locadoras } from '../models/reservas.models';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 

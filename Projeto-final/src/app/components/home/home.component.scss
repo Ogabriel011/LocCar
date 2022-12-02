@@ -9,11 +9,10 @@ main{
     height: 724px;
     background-image: url(../../../assets/banner-car-1.png);
     background-repeat: no-repeat;
+    background-position: 50%;
 }
 
-.Fundo{
-    left: 100px;
-}
+
 
 .logo{
     display: flex;
@@ -27,59 +26,60 @@ display: flex;
 width: 100%;
 height: 253px;
 
+
 justify-content: center;
 align-items: center;
 
 
 }
 
-#login{
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 9px 33px;
-    gap: 10px;
-    margin-right: 100px;    
-    width: 170px;
-    height: 50px;
-    left: 650px;
-    top: 612px;
+// #login{
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 9px 33px;
+//     gap: 10px;
+//     margin-right: 100px;    
+//     width: 170px;
+//     height: 50px;
+//     left: 650px;
+//     top: 612px;
 
-    background: #F55E5E;
-    box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
-    border-radius: 10px;
+//     background: #F55E5E;
+//     box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+//     border-radius: 10px;
 
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;  
-    text-decoration: none;
+//     font-family: 'Quicksand', sans-serif;
+//     color: white;
+//     font-size: 24px;
+//     font-weight: bold;  
+//     text-decoration: none;
 
-}
+// }
 
-#cadastro{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 9px 33px;
-gap: 10px;
+// #cadastro{
+// display: flex;
+// flex-direction: row;
+// justify-content: center;
+// align-items: center;
+// padding: 9px 33px;
+// gap: 10px;
 
 
-width: 170px;
-height: 50px;
-left: 850px;
-top: 612px;
+// width: 170px;
+// height: 50px;
+// left: 850px;
+// top: 612px;
 
-background: #F55E5E;
-box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
-border-radius: 10px;
+// background: #F55E5E;
+// box-shadow: 3px 3px 7px rgba(245, 94, 94, 0.56);
+// border-radius: 10px;
 
-font-family: 'Quicksand', sans-serif;
-color: white;
-font-size: 24px;
-font-weight: bold;
-}
+// font-family: 'Quicksand', sans-serif;
+// color: white;
+// font-size: 24px;
+// font-weight: bold;
+// }
 
 // Parte Dos Cards das Carangas
 h1{
@@ -88,6 +88,8 @@ h1{
     font-size: 40px;
     font-weight: bold;
     justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .Cards{
@@ -122,3 +124,130 @@ h2{
     font-size: 24px;
     align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+///////// Rafael{
+.botao_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: relative;
+  
+    margin: 0;
+    padding: 12px 0;
+  
+    font-family: 'Quicksand';
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 300;
+  
+    color: #F6F6F6;
+    border: 1px solid rgb(138, 43, 226);
+  
+    text-decoration: none;
+    cursor: pointer;
+  
+    transition: .5s;
+
+    width: 170px;
+    height: 50px;
+  }
+
+  .mecanismo{
+    position: relative;
+    overflow: hidden;
+  
+    transition: .2s;
+  }
+  
+  .mecanismo:hover{
+    color: #eee;
+    background: #8A2BE2;
+    box-shadow: 0 0 10px #8A2BE2, 0 0 15px #5B2BE2, 0 0 30px #730bec;  
+  
+    transition-delay: 1s;
+  }
+  
+  .mecanismo span{
+    position: absolute;
+    display: block;
+  }
+  
+  .mecanismo span:nth-child(1){
+    width: 100%;
+    height: 2px;
+  
+    top: 0;
+    left: -100%;
+  
+    background: linear-gradient(88.89deg, transparent, #5B2BE2);
+  }
+  
+  .mecanismo:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+  }
+  
+  .mecanismo span:nth-child(2){
+    width: 2px;
+    height: 100%;
+  
+    right: 0;
+    top: -100%;
+  
+    background: linear-gradient(181.44deg, transparent, #5B2BE2);
+  }
+  
+  .mecanismo:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+  }
+  
+  .mecanismo span:nth-child(3){
+    width: 100%;
+    height: 2px;
+  
+    bottom: 0;
+    right: -100%;
+  
+    background: linear-gradient(269.44deg, transparent, #5B2BE2);
+  }
+  
+  .mecanismo:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: .5s;
+  }
+  
+  .mecanismo span:nth-child(4){
+    width: 2px;
+    height: 100%;
+  
+    left: 0;
+    bottom: -100%;
+  
+    background: linear-gradient(359.88deg, transparent, #5B2BE2);
+  }
+  
+  .mecanismo:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .75s;
+  }
+
+  .cadastro{
+    margin-left: 40px;
+  }
+///// }

@@ -55,7 +55,7 @@ export class ReservasClienteComponent implements OnInit {
   }
 
   MostrarCarros(){
-    this.CarrosService.GetCarros().subscribe({
+    this.CarrosService.LerCarros().subscribe({
       next: (carros: Carros[]) => {
         this.carros = carros
         console.log(carros)

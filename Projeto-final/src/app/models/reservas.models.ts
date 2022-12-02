@@ -19,3 +19,15 @@ export interface Carros{
     tipoCarroId:number,
 }
 
+export interface Locadoras {
+    id: number,
+    nome: string,
+    endereco:  string,
+    telefone: string
+}
+
+export interface TipoCarro{
+    id:number,
+    nome: string
+}
+

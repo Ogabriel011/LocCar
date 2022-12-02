@@ -1,42 +1,59 @@
 <app-header></app-header>
 <main>
-    <!-- <form [formGroup]="form"> -->
+    <form [formGroup]="form">
         <div class="card">
             <h2><b>Carros</b></h2>
 
             <div class="informacoes">
-                <input type="text" name="carros" class="carros" placeholder="Nome do carro" formControlName="carros">
+                <input type="text" name="carros" class="nome_carro" placeholder="Nome do carro" formControlName="nome">
 
-                <select name="tipo_carro" class="tipo_carro" formControlName="tipo_carro">
+                <select name="tipo_carro" class="tipo_carro" formControlName="tipoCarroId">
                     <option value="0" disabled>Selecione o tipo</option>
+                    <option [value]="item.id" *ngFor="let item of tipoCarro; index as i">{{item.nome}}</option>
                 </select>
 
                 <div class="portas_pessoas">
-                    <input type="number" name="num_portas" class="portas" placeholder="Portas" formControlName="num_portas">
-                    <input type="number" name="pessoas" class="pessoas" placeholder="Núm de pessoas" formControlName="pessoas">
+                    <input type="number" name="num_portas" class="portas" placeholder="Portas" formControlName="portas">
+                    <input type="number" name="pessoas" class="pessoas" placeholder="Núm de pessoas" formControlName="npessoas">
                 </div>
 
                 <div class="selector_e_botao">
-                    <select name="locadora" class="locadora" formControlName="locadora">
+                    <select name="locadora" class="locadora" formControlName="locadoraId">
                         <option value="0" disabled>Selecione a locadora</option>
+                        <option [value]="item.id" *ngFor="let item of locadoras; index as i">{{item.nome}}</option>
                     </select>
 
-                    <button class="cadastrar_editar" type="submit">Cadastrar</button>
+                    <button class="cadastrar_editar" (click)="CadastrarCarros()" *ngIf="!verificarEditar" type="submit">Cadastrar</button>
+                    <button class="cadastrar_editar" (click)="EditarCarros()" *ngIf="verificarEditar" type="submit">Editar</button>
                 </div>
             </div>
         </div>
 
         <div class="carros_cadastrados">
-            <div class="popular">
-                <h2><b>Popular</b></h2>
+
+            <div class="categoria" *ngFor="let categoria of tipoCarro; index as i">
+                <h2><b>{{categoria.nome}}</b></h2>
                 <div class="linha"></div>
 
-                <div class="carrosPopular">
-                    <img src="../../../../assets/car3 2.png">
+                <div class="popular">
 
+                    <div class="carros" *ngFor="let item of FiltrarCarros(categoria.id); index as i" >
+                        <img src="../../../../assets/car3 2.png">
+    
+                        <b>{{item.nome}}</b>
+    
+                        <p>Faça a sua reserva e garanta a locação do automóvel.</p>
+    
+                        <button class="editar" (click)="InputarDadosCarros(item)" type="submit"><b>Editar</b></button>
+                        <button class="excluir" (click)="ExcluirCarros(item.id)" type="submit"><b>Excluir</b></button>
+                    </div>
                     
                 </div>
             </div>
+            
+            
+            
         </div>
-    <!-- </form> -->
+    </form>
 </main>
+
