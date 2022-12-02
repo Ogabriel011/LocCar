@@ -2,26 +2,28 @@
     <div class="img" id="alturaimg">
         <img src="../../assets/Group 1.png" alt="Locadora">
     </div>
-    <mat-card class="tudo">
-        <mat-card-content>
-            <div class="mover">
-                <mat-form-field class="input">
-                    <mat-label>nome</mat-label>
-                    <input type="text" matInput placeholder="Nome Completo">
-                  </mat-form-field>
-
-              
-                <br>
-                <div class="telefone">
-                    <input type="text" placeholder="telefone">
-                </div>
-                <br>
-                <div class="email">
-                    <input type="text" placeholder="E-mail">
-                </div>
-                <br>
-                <button>Cadastrar</button>
+    <div class="mover">
+        <form [formGroup]="form">
+            <div class="nome">
+                <input type="text" placeholder="Nome Completo" formControlName="nome">
             </div>
-        </mat-card-content>
-    </mat-card>
+            <br>
+            <div class="telefone">
+                <input type="text" placeholder="telefone" formControlName="telefone">
+            </div>
+            <br>
+            <div class="email">
+                <input type="text" placeholder="E-mail" formControlName="email">
+            </div>
+            <br>
+            <div class="senha">
+                <input type="text" placeholder="senha" formControlName="senha">
+            </div>
+            <br>
+            <div class="cadastrar">
+                <button (click)="cadastrarDadosUsuarios()">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
 </main>
