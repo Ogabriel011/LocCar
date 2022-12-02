@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Carros, Locadoras, TipoCarro } from 'src/app/models/reservas.models';
-import { CarrosService } from 'src/app/services/carros.service';
+import { CarrosService } from 'src/app/Services/carros.service';
 import { LocadoraService } from 'src/app/Services/locadora.service';
 import { TipoCarroService } from 'src/app/Services/tipo-carro.service';
 
