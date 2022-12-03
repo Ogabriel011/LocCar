@@ -4,12 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from  '@angular/forms';
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import { HttpClientModule } from '@angular/common/http'
-import { ReactiveFormsModule } from '@angular/forms';
+import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,6 +19,7 @@ import { CarrosComponent } from './components/carros/carros.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { CarrosClienteComponent } from './components/carros-cliente/carros-cliente.component';
+import { HeaderClientesComponent } from './components/header-clientes/header-clientes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,13 +34,12 @@ import { CarrosClienteComponent } from './components/carros-cliente/carros-clien
     ReservasComponent,
     ReservasClienteComponent,
     CarrosComponent,
+    HeaderClientesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-   MatCardModule,
-   MatInputModule,
    HttpClientModule,
    ReactiveFormsModule,
     BrowserAnimationsModule,

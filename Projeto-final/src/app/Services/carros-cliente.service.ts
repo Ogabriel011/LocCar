@@ -29,4 +29,13 @@ export class CarrosService {
   EditarCarros(carro:Carros):Observable<Carros>{
     return this.httpClient.put<Carros>(`${this.url}/${carro.id}`, carro)
   }
+
+  Getcarros(): Observable<any>{
+    return this.httpClient.get(`${this.url}/Carros`)
+  }
+
+  GetTipocarros(): Observable<any>{
+    return  this.httpClient.get(`${this.url}/tipoCarros`)
+}
+
 }

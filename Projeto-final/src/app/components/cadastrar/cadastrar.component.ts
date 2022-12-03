@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { UsuarioService } from '../usuario.service'
+import { UsuarioService } from '../../usuario.service'
+import { Router, RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar',
@@ -13,7 +14,7 @@ export class CadastrarComponent implements OnInit {
 
   form!: FormGroup;
 
-  constructor(private serviceUsuario: UsuarioService, private fb: FormBuilder) { }
+  constructor(private serviceUsuario: UsuarioService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -58,6 +59,9 @@ export class CadastrarComponent implements OnInit {
       next: (d: any) => {
         console.log(d);
         this.listarUsuario()
+        this.form.reset()
+
+        this.router.navigateByUrl("/carros-cliente")
       },
       error: (e: any) => {
         console.log("algo deu errado" + e);

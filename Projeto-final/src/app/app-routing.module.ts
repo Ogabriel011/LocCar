@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LocadoraComponent } from "./components/locadora/locadora.component";
 import { ReservasComponent } from "./components/reservas/reservas.component";
@@ -8,6 +8,7 @@ import { CarrosComponent } from './components/carros/carros.component';
 import { CarrosClienteComponent } from './components/carros-cliente/carros-cliente.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,9 @@ const routes: Routes = [
   },
   {
     path: 'carros-cliente', component: CarrosClienteComponent
+  },
+  {
+    path: 'cadastrar', component: CadastrarComponent
   }
 ];
 
