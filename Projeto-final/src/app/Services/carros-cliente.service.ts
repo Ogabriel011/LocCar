@@ -8,7 +8,7 @@ import { Carros } from '../models/reservas.models';
   providedIn: 'root'
 })
 export class CarrosService {
-  private url = 'https://servidorcarros.glitch.me/carros'
+  private url = 'https://servidorcarros.glitch.me'
 
   constructor(private httpClient: HttpClient) { 
 

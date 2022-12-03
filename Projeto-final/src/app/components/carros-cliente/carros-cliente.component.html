@@ -1,19 +1,46 @@
-<main>
+<main>    
+
     <h1>Carros</h1>
 
-    <br>
-    <div class="Popular">
-        <label>Popular</label>
-        <br>
-    </div>
+    <div class="carros_cadastrados">
+
+    <div class="categoria" *ngFor="let item of listaTipoCarros; index as i">
+    <h2><b>{{item.nome}}</b></h2>
+    <div class="linha"></div>
     
-    <br>
-    <div class="Sedan">
-        <label>Sedan</label>
-        <br>
+    <div class="popular" *ngFor="let Caranga of filtrarCarros(item.id); index as i">
+
+        <div class="carros" >
+            <img src="../../../../assets/car3 2.png">
+
+            <b>Fiat Uno 1.0</b>
+
+            <p>Faça a sua reserva e garata a locação do automóvel.</p>
+
+            <button class="Detalhes" type="submit"><b>Detalhes</b></button>
+
+        </div>
+
+      
+        </div>
     </div>
-    <br>
-    <div class="Luxo">
-        <label>Luxo</label>
+
+
+
+
+    <div class="sedan">
+
+        
     </div>
+    </div>
+
+
+    <div class="luxo"> 
+
+        <div class="carros">
+            
+        </div>
+    </div>
+
 </main>
+
