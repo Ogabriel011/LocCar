@@ -5,25 +5,25 @@
             <h2><b>Carros</b></h2>
 
             <div class="informacoes">
-                <input type="text" name="carros" class="nome_carro" placeholder="Nome do carro" formControlName="nome">
+                <input type="text" name="carros" class="nome_carro" placeholder="Nome do carro" formControlName="nome" required>
 
                 <select name="tipo_carro" class="tipo_carro" formControlName="tipoCarroId">
                     <option value="0" disabled>Selecione o tipo</option>
-                    <option [value]="item.id" *ngFor="let item of tipoCarro; index as i">{{item.nome}}</option>
+                    <option [value]="item.id" *ngFor="let item of tipoCarro; index as i" required>{{item.nome}}</option>
                 </select>
 
                 <div class="portas_pessoas">
-                    <input type="number" name="num_portas" class="portas" placeholder="Portas" formControlName="portas">
-                    <input type="number" name="pessoas" class="pessoas" placeholder="Núm de pessoas" formControlName="npessoas">
+                    <input type="number" name="num_portas" class="portas" placeholder="Portas" formControlName="portas" required>
+                    <input type="number" name="pessoas" class="pessoas" placeholder="Núm de pessoas" formControlName="npessoas" required>
                 </div>
 
                 <div class="selector_e_botao">
-                    <select name="locadora" class="locadora" formControlName="locadoraId">
+                    <select name="locadora" class="locadora" formControlName="locadoraId" required>
                         <option value="0" disabled>Selecione a locadora</option>
                         <option [value]="item.id" *ngFor="let item of locadoras; index as i">{{item.nome}}</option>
                     </select>
 
-                    <button class="cadastrar_editar" (click)="CadastrarCarros()" *ngIf="!verificarEditar" type="submit">Cadastrar</button>
+                    <button class="cadastrar_editar" (click)="CadastrarCarros()" *ngIf="!verificarEditar" type="submit" [disabled]="!form.valid">Cadastrar</button>
                     <button class="cadastrar_editar" (click)="EditarCarros()" *ngIf="verificarEditar" type="submit">Editar</button>
                 </div>
             </div>

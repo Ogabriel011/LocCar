@@ -145,7 +145,12 @@ h2{
     transition-duration: 1s;
 }
 
-.cadastrar_editar:hover{
+.cadastrar_editar:disabled{
+    background-color:  #CBDBE8;
+    color: #99a1a7;
+}
+
+.cadastrar_editar:hover:enabled{
     cursor: pointer;
     color: #F55E5E;
     background-color: #ffffff;
