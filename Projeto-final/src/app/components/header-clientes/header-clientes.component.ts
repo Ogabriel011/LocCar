@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-header-clientes',
@@ -32,4 +33,5 @@ export class HeaderClientesComponent implements OnInit {
 
   }
 
+  sair(): void{}
 }

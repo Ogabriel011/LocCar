@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
-import { PerfilService } from '../service/perfil.service';
+import { PerfilService } from '../../Services/perfil.service';
 
 @Component({
   selector: 'app-perfil',

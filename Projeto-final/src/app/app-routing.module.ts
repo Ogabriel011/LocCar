@@ -9,6 +9,7 @@ import { CarrosClienteComponent } from './components/carros-cliente/carros-clien
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'carros', component: CarrosComponent
+  },
+  {
+    path: 'perfil', component: PerfilComponent
   },
   {
     path: 'perfil-usuario', component: PerfilUsuarioComponent

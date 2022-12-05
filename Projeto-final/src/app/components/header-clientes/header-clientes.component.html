@@ -1,11 +1,9 @@
 <header>
 
-    <!-- <a class="preto" routerLink="/home">Home</a> -->
     <a class="preto" routerLink="/carros-cliente" [ngClass]="{'vermelho' : selecionado === 'carros-cliente' }">Carros</a>
     <a class="preto" routerLink="/reservas-cliente" [ngClass]="{'vermelho' : selecionado === 'reservas-cliente' }">Reservas</a>
-    <a routerLink="/home"><img src="../../../assets/img/Group 1.png"></a>
-    <!-- <a class="preto" routerLink="/locadoras" [class.disabled]="true ? true : null">Locadoras</a> -->
+    <a><img src="../../../assets/img/Group 1.png"></a>
     <a class="preto" routerLink="/perfil-usuario" [ngClass]="{'vermelho' : selecionado === 'perfil-cliente' }">Perfil</a>
-    <a class="preto" routerLink="#">Sair</a>
+    <a class="preto" routerLink="/home">Sair</a>
 
 </header>
