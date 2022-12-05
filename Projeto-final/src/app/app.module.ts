@@ -5,6 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from  '@angular/forms';
 import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
@@ -23,6 +29,7 @@ import { HeaderClientesComponent } from './components/header-clientes/header-cli
 @NgModule({
   declarations: [
     AppComponent,
+    PerfilComponent,
     CadastrarComponent,
     HomeComponent,
     LoginComponent,
@@ -39,6 +46,11 @@ import { HeaderClientesComponent } from './components/header-clientes/header-cli
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatInputModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
    HttpClientModule,
    ReactiveFormsModule,
