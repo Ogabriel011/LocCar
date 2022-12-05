@@ -1,0 +1,38 @@
+<main>
+
+  <form [formGroup]="form">
+
+    <div class="perfil">
+
+      <h1>Perfil</h1>
+      <input type="text" placeholder="Maria de Fátma Muniz" formControlName="nome">
+      <br>
+      <input type="number" placeholder="(11) 9999-9090" formControlName="telefone">
+      <br>
+      <input type="email" placeholder="maria@gmail.com" formControlName="email">
+      <br><br>
+      <button class="botao_atualizar" (click)="editarPerfil()">Atualizar</button>
+
+    </div>
+
+  </form>  
+
+    <br><br><br>
+
+    <div class="usuarios_cadastrados">
+
+      <div class="usuario1" *ngFor="let perfil of listaPerfil; index as i;">
+
+        <p>{{perfil.nome}}</p>
+        <p>{{perfil.telefone}} </p>
+        <p>{{perfil.email}}</p>
+
+        <button class="botao_excluir" (click)="deletarPerfil(perfil.id)">Excluir usuário</button>
+
+      </div>
+      <br>
+  
+    </div>
+
+
+</main>
