@@ -1,11 +1,11 @@
 <header>
 
-    <a routerLink="/home">Home</a>
-    <a routerLink="/carros">Carros</a>
-    <a routerLink="/reservas">Reservas</a>
+    <a class="preto" routerLink="/home">Home</a>
+    <a class="preto" routerLink="/carros" [ngClass]="{'vermelho' : selecionado === 'carros' }">Carros</a>
+    <a class="preto" routerLink="/reservas" [ngClass]="{'vermelho' : selecionado === 'reservas' }">Reservas</a>
     <a routerLink="/home"><img src="../../../assets/img/Group 1.png"></a>
-    <a routerLink="/locadoras">Locadoras</a>
-    <a routerLink="#">Perfil</a>
-    <a routerLink="#">Sair</a>
+    <a class="preto" routerLink="/locadoras" [ngClass]="{'vermelho' : selecionado === 'locadoras'}">Locadoras</a>
+    <a class="preto" routerLink="#" [ngClass]="{'vermelho' : selecionado === 'perfil' }">Perfil</a>
+    <a class="preto" routerLink="#">Sair</a>
 
 </header>

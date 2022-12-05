@@ -52,7 +52,9 @@ export class CadastrarComponent implements OnInit {
       nome: nomeInput,
       email: emailInput,
       telefone: telefoneInput,
-      senha: senhaInput
+      senha: senhaInput,
+      tipoId: 2,
+      foto: "avatar.png"
     }
     
     this.serviceUsuario.postUsuarios(dados).subscribe({
@@ -61,7 +63,7 @@ export class CadastrarComponent implements OnInit {
         this.listarUsuario()
         this.form.reset()
 
-        this.router.navigateByUrl("/carros-cliente")
+        this.router.navigateByUrl("/login")
       },
       error: (e: any) => {
         console.log("algo deu errado" + e);
